@@ -1,0 +1,47 @@
+<div class="container">
+	<br>
+
+	<div align="center" style="width:800px; margin:0 auto;">
+		<div class="form-group ">
+			<label class="col-sm-3 control-label" for="selectbasic">Select an Event</label>
+			<div class="col-sm-4">
+				<select id="selectbasic" name="selectbasic" class="form-control" ng-model="HackthonEvent">
+					<option value="">Select a Event</option>
+					<option ng-repeat="Event in HackthonEvents" value="{{Event.EventName}}">{{Event.EventName}}</option>
+				</select>
+			</div>
+			<div class="col-sm-3">
+				<button type="button" class="btn btn-success btn-block" ng-click="GetResults()">Get Data</button>
+			</div>
+
+		</div>
+	</div>
+	<br>
+	<br>
+	<div style="width:800px; max-height: 500px; background-color: lightblue; margin:0 auto;">
+		
+		<table id="mytab1" class="table table-striped table-bordered" ng-if="GroupData">
+			<th >Group Name</th>
+			<th> Factor1</th>
+			<th> Factor2</th>
+			<th> Factor3</th>
+			<th> Factor4</th>
+			<th> Factor5</th>
+
+			<tr ng-repeat="user in GroupData">
+				<td id="GroupName" ng-click="DrawChart()">{{user.GroupName}}</td>
+				<td contenteditable='true' ng-model="Factor1">{{user.Factor1}}</td>
+				<td contenteditable='true' ng-model="Factor2">{{user.Factor2}}</td>
+				<td contenteditable='true' ng-model="Factor3">{{user.Factor3}}</td>
+				<td contenteditable='true' ng-model="Factor4">{{user.Factor4}}</td>
+				<td contenteditable='true' ng-model="Factor5">{{user.Factor5}}</td>
+			</tr>
+		</table>
+
+
+
+	</div>
+	<br>
+	<div id="chart_div"></div>
+
+</div>

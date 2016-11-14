@@ -1,0 +1,160 @@
+<div class="modal-body row">
+
+	<div class="col-md-5">
+		<!--left-->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+
+				<h3 class="panel-title">Register an Event</h3>
+			</div>
+
+			<div class="panel-body">
+				<form class="form-horizontal" role="form">
+					<fieldset>
+
+						<!--EventName-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="textinput">Event Name</label>
+							<div class="col-md-6">
+								<input id="textinput" name="textinput" ng-model="EventName" type="text" placeholder="Enter Event Name" class="form-control input-md" required="">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="textinput">Event Location</label>
+							<div class="col-md-6">
+								<input id="textinput" name="textinput" ng-model="EventLocation" type="text" placeholder="Enter Event Location" class="form-control input-md" required="">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="textinput">Event Start Date</label>
+							<div class="col-md-6">
+								<input id="EventDate" name="EventDate" type="datetime-local" ng-model="EventStartDate" placeholder="Enter Event Start Date" class="form-control input-md" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="textinput">Event End Date</label>
+							<div class="col-md-6">
+								<input id="EventDate" name="EventDate" type="datetime-local" ng-model="EventEndDate" placeholder="Enter Event End Date" class="form-control input-md" required>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="singlebutton"></label>
+							<div class="col-md-4">
+								<button id="singlebutton" name="singlebutton" class="btn btn-info" ng-click="AddEvent()" style="align:center;">Register Event</button>
+							</div>
+						</div>
+
+
+
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+
+				<h3 class="panel-title">Options</h3>
+			</div>
+
+			<div class="panel-body">
+				<form class="form-horizontal" role="form">
+					<fieldset>
+
+						<!--EventName-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="singlebutton"></label>
+							<div class="col-md-4">
+								<button id="singlebutton" name="singlebutton" class="btn btn-success btn-block"  style="align:center;" ng-click="Navigate('\Users')">View Users</button>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="singlebutton"></label>
+							<div class="col-md-4">
+								<button id="singlebutton" name="singlebutton" class="btn btn-info btn-block" style="align:center;" ng-click="Navigate('\Scores')">View Results</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="col-md-7">
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+
+				<h3 class="panel-title">Add User</h3>
+			</div>
+
+			<div class="panel-body">
+				<form class="form-horizontal">
+					<fieldset>
+
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="selectbasic">Select an Event</label>
+							<div class="col-md-5">
+								<select id="selectbasic" name="selectbasic" class="form-control" ng-model="HackthonEvent">
+									<option value="">Select a Event</option>
+									<option ng-repeat="Event in HackthonEvents" value="{{Event.EventName}}">{{Event.EventName}}</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="UserName">Group Name</label>
+							<div class="col-md-5">
+								<input id="UserName" name="UserName" ng-model="GroupName" type="text" placeholder="Enter name of group" class="form-control input-md" required="">
+
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="GithubURI">Participant Name</label>
+							<div data-role="dynamic-fields" class="col-md-5">
+								<div class="form-inline">
+
+									<div class="form-group">
+										<input type="text" class="form-control input-md" id="field-name" ng-model="UserName" placeholder="User Name" >
+										<input type="text" class="form-control input-md" id="field-name" ng-model="GithubURI" placeholder="Git Name">
+									</div>
+
+
+									<div class="form-group">
+										<button class="btn btn-success" data-role="remove">
+											<span class="glyphicon glyphicon-remove"></span>
+										</button>
+										<button class="btn btn-info" data-role="add">
+											<span class="glyphicon glyphicon-plus"></span>
+										</button>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- /div.row -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="singlebutton"></label>
+							<div class="col-md-6">
+								<button id="singlebutton" name="singlebutton" class="btn btn-success col-md-6" ng-click="AddUser()">Add User</button>
+							</div>
+						</div>
+
+
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="row">
+		<br>
+		<br>
+		<div class="col-md-4 col-md-offset-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+
+					<h3 class="panel-title">Registration Form</h3>
+				</div>
+				<div class="panel-body" style="max-height: 305;">
+					<form role="form">
+						<fieldset>
+							<div class="form-group">
+								<input class="form-control" ng-model="FirstName" placeholder="First Name" name="FirstName" type="text" autofocus required>
+							</div>
+							<div class="form-group">
+								<input class="form-control" ng-model="LastName" placeholder="Last Name" name="LastName" type="text" required>
+							</div>
+
+							<div class="form-group">
+								<input class="form-control" ng-model="EmailId" placeholder="E-mail" name="email" type="email" required>
+							</div>
+
+
+							<div class="form-group">
+								<input class="form-control" placeholder="Password" name="password" ng-model="Password" type="password" value="" required>
+							</div>
+
+							<!-- Multiple Checkboxes (inline) -->
+							<div class="form-group">
+								
+								<input type="radio" name="checkboxes" id="checkboxes-0"  ng-model="UserType" value="Judge" required> Judge
+
+								<input type="radio" name="checkboxes" ng-model="UserType" id="checkboxes-1" value="Host" required> Host
+
+
+							</div>
+
+							<!-- Change this to a button or input when using this as a form -->
+							<button type="button" class="btn btn-success btn-block" ng-click="RegisterUser()">Register</button>
+							<p>Go Back to Login? <a href="" ng-click="go('/')" class="">Login</a></p>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

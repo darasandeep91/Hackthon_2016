@@ -1,0 +1,97 @@
+<html ng-app="Mlab">
+
+<head>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<style>
+		.alignleft {
+			float: left;
+		}
+		
+		.alignright {
+			float: right;
+		}
+		
+		Image {
+			background-image: "Images\AMAZON.png";
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+		}
+		
+		div.ex1 {
+			width: 500px;
+			margin: auto;
+			border: 3px;
+		}
+		
+		body {
+			background-image: url(Images/1.jpg);
+			background-size: cover;
+			/* <------ */
+			background-repeat: no-repeat;
+			background-position: center center;
+			/* optional, center the image */
+		}
+		
+		#left {
+			width: 450px;
+			margin: 5px;
+		}
+		
+		#center {
+			margin: 5px 0;
+			width: calc(100% - 460px);
+		}
+		
+		#right {
+			margin: 5px;
+			width: 450px;
+		}
+		
+		.leftContent {
+			float: left;
+			width: 450px;
+			margin: 5px;
+		}
+		
+		.rightContent {
+			float: right;
+			width: 220px;
+			background-color: green;
+			margin: 5px;
+		}
+		
+		.mainContent {
+			padding: 15px; //optional
+			background-color: blue;
+		}
+	</style>
+</head>
+
+<body>
+	<div ng-view>
+
+	</div>
+	<script src="scripts/angular.js"></script>
+	<script src="scripts/angular-route.js"></script>
+	<script src="App/controllers/app.js"></script>
+	<script src="App/services/AngularFactory.js"></script>
+	<script src="App/controllers/RegisterController.js"></script>
+	<script src="App/controllers/LoginController.js"></script>
+	<script src="App/controllers/HomeController.js"></script>
+	<script src="App/services/UserFactory.js"></script>
+	<script src="App/controllers/HostController.js"></script>
+	<script src="App/services/GithubFactory.js"></script>
+	<script src="App/controllers/ResultsController.js"></script>
+	<script src="App/controllers/AdminController.js"></script>
+	<script src="scripts/Dynamic.js"></script>
+	<script src="App/controllers/ScoresController.js"></script>
+
+</body>
+
+</html>
